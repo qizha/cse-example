@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.huawei.paas.cse</groupId>
+		<artifactId>example</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>cse-consumer</artifactId>
+
+	<dependencies>
+		<!-- transport -->
+		<dependency>
+			<groupId>com.huawei.paas.cse</groupId>
+			<artifactId>cse-transport-rest-vertx</artifactId>
+		</dependency>
+
+		<!-- provider -->
+		<dependency>
+			<groupId>com.huawei.paas.cse</groupId>
+			<artifactId>cse-provider-pojo</artifactId>
+		</dependency>
+
+		<!-- handler -->
+		<dependency>
+			<groupId>com.huawei.paas.cse</groupId>
+			<artifactId>cse-handler-performance-stats</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.huawei.paas.cse</groupId>
+			<artifactId>cse-handler-loadbalance</artifactId>
+		</dependency>
+	</dependencies>
+	<properties>
+		<demo.main>com.huawei.paas.cse.example.consumer.MainClient</demo.main>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,24 @@
+swagger: '2.0'
+info:
+  title: cse example
+  version: 1.0.0
+  x-java-interface: com.huawei.paas.cse.example.provider.HelloWorld
+  
+basePath: /helloworld
+produces:
+  - application/json
+  
+paths:
+  /sayhello:
+    get:
+      operationId: sayHello
+      parameters:
+        - name: name
+          in: query
+          required: true
+          type: string
+      responses: 
+        200:
+          description: say hello
+          schema: 
+            type: string

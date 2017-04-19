@@ -1,0 +1,17 @@
+﻿APPLICATION_ID: cse-example
+service_description:
+  name: helloservice
+  version: 0.0.1
+cse:
+  service:
+    registry:
+      address: http://127.0.0.1:9980
+  rest:
+    address: 127.0.0.1:8080
+  handler:
+    chain:
+      Provider:
+        default: perf-stats
+  metrics:
+    cycle:
+      ms: 3000

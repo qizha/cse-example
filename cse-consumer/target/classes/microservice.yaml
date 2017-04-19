@@ -1,0 +1,15 @@
+﻿APPLICATION_ID: cse-example
+service_description:
+  name: helloconsumer
+  version: 0.0.1
+cse:
+  service:
+    registry:
+      address: http://127.0.0.1:9980
+  handler:
+    chain:
+      Consumer:
+        default: perf-stats,loadbalance
+  metrics:
+    cycle:
+      ms: 3000
